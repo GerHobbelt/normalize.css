@@ -1,4 +1,16 @@
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/*! http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 | License: none (public domain) */
+
+/**
+ * A normalizing stylesheet with some additions from the classic reset and some tweaks:
+ *
+ * - border-box for all elements
+ *
+ * - no margins
+ * - no paddings
+ * - no list styles
+ * - no quotes
+ */
 
 /* ==========================================================================
    HTML5 display definitions
@@ -52,6 +64,56 @@ audio:not([controls]) {
 }
 
 /* ==========================================================================
+   Batch
+   ========================================================================== */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+
+
+/* ==========================================================================
    Base
    ========================================================================== */
 
@@ -67,13 +129,10 @@ html {
     -ms-text-size-adjust: 100%; /* 2 */
 }
 
-/**
- * Remove default margin.
- */
-
 body {
-    margin: 0;
+    line-height: 1;
 }
+
 
 /* ==========================================================================
    Links
@@ -162,14 +221,6 @@ pre {
 }
 
 /**
- * Set consistent quote types.
- */
-
-q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-/**
  * Address inconsistent and variable font size in all browsers.
  */
 
@@ -197,64 +248,14 @@ sub {
     bottom: -0.25em;
 }
 
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
-
-img {
-    border: 0;
-}
-
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-
-svg:not(:root) {
-    overflow: hidden;
-}
-
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-
-figure {
-    margin: 0;
-}
 
 /* ==========================================================================
    Forms
    ========================================================================== */
 
 /**
- * Define consistent border, margin, and padding.
- */
-
-fieldset {
-    border: 1px solid #c0c0c0;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-
-legend {
-    border: 0; /* 1 */
-    padding: 0; /* 2 */
-}
-
-/**
  * 1. Correct font family not being inherited in all browsers.
  * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
 
 button,
@@ -263,7 +264,6 @@ select,
 textarea {
     font-family: inherit; /* 1 */
     font-size: 100%; /* 2 */
-    margin: 0; /* 3 */
 }
 
 /**
