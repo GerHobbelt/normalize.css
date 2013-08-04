@@ -2,24 +2,23 @@
 // normalize.css v2.1.2
 // HTML5 Boilerplate v4.2.0
 
-// Base
+///// Base
 
-// nrmlz.65, set text-size-adjust
-// nrmlz.65, set font-family
+// Set font-family, text-size-adjust (Normalize #65)
 html {
   color: $text-color;
-  font-family: $font-family-main;
   font-size: $base-font-size;
   line-height: 1.4;
+  font-family: $font-family-main;
   text-size-adjust: 100%;
 }
 
-// nrmlz.76, set margin
+// Set margin (Normalize #76)
 body {
   margin: 0;
 }
 
-// nrmlz.11, set display: block
+// Set display: block (Normalize #11)
 article,
 aside,
 details,
@@ -35,58 +34,57 @@ summary {
 display: block;
 }
 
-// nrmlz.50, set display: none
+// Set display: none (Normalize #50)
 [hidden],
 template {
   display: none;
 }
 
-// H5BP.26, set background, text-shadow: none
+// Set background, text-shadow: none (H5BP #26)
 ::-moz-selection {
-  background: #b3d4fc;
   text-shadow: none;
+  background: #b3d4fc;
 }
 ::selection {
-  background: #b3d4fc;
   text-shadow: none;
+  background: #b3d4fc;
 }
 
-// Universal focus styles
+///// Universal focus styles
+
 // Set outline
 :focus {
   outline:none;
 }
 
-///////////////////////////////////////////////////////////
-// Links
+///// Links
 
-// nrmlz.88, set background
+// Set background (Normalize #88)
 a {
   background: transparent;
 
-  // nrmlz.96, set outline
+  // Set outline (Normalize #96)
   &:focus {
     outline: thin dotted;
   }
 
-  // nrmlz.104, set outline: 0
+  // Set outline: 0 (Normalize #104)
   &:active,
   &:hover {
     outline: 0;
   }
 }
 
-///////////////////////////////////////////////////////////
+///// Headers
 
-// Headers
 h1, h2, h3, h4, h5, h6 {
   a {}
 }
 
-// nrmlz.117, set margin, font-size
+// Set margin, font-size (Normalize #117)
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+  font-size: 2em;
 }
 h2 {}
 h3 {}
@@ -99,19 +97,18 @@ p {}
 //// For robust use should specify a blockquote module with class based internals
 blockquote {}
 
-// nrmlz.191, set quotes
+// Set quotes (Normalize #191)
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-// nrmlz.152, set height
-// H5BP.42, set styles
+// Set height (Normalize #152)
+// Set styles (H5BP #42)
 hr {
   height: 0px;
 }
 
-///////////////////////////////////////////////////////////
-// lists
+///// Lists
 
 //// Zero out and then add back in in content area, or with "with bullets" mixin?
 ol,
@@ -119,7 +116,7 @@ ul {}
 
 li {
 
-  // Remove vertical margins from nested lists
+  // Set vertical margins
   ol,
   ul {
     margin-top: 0;
@@ -131,26 +128,24 @@ dl {}
 dt {}
 dd {}
 
-///////////////////////////////////////////////////////////
+///// Figures
 
-// Figures
-
-// nrmlz.251, set margin
+// Set margin (Normalize #251)
 figure {
   margin: 0;
 
-  & > img{
+  //// Needed with verical align property on img?
+  & > img {
     display:block;
   }
 }
 
 figcaption {}
 
-///////////////////////////////////////////////////////////
 // Embedded content
 
-// nrmlz.30, set display
-// H5BP.55, set vertical-align: middle
+// Set display (Normalize #30)
+// Set vertical-align: middle (H5BP #55)
 img,
 canvas,
 audio,
@@ -159,48 +154,50 @@ video {
   vertical-align: middle;
 }
 
-// Fluid element styles
+///// Fluid embedded content
+
 img,
-video,
 embed,
-object {
+object,
+video {
   max-width: 100%;
   height: auto;
 }
 
-// nrmlz.231, set border, interpolation-mode: bicubic
+// Set border, interpolation-mode: bicubic (Normalize #231)
 img {
   border: 0;
-  -ms-interpolation-mode: bicubic
+
+  -ms-interpolation-mode: bicubic;
 }
 
-// nrmlz.239, set overflow: hidden
+// Set overflow: hidden (Normalize #239)
 svg:not(:root) {
   overflow: hidden;
 }
 
-// nrmlz.40, set display: none, height: 0
+// Set display: none, height: 0 (Normalize #40)
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-///////////////////////////////////////////////////////////
+///// Emphasis
 
 em {}
 
-// nrmlz.139, set font-weight
+// Set font-weight (Normalize #139)
 strong {
   font-weight: bold;
 }
 
-// nrmlz.162, set background, color
+// Set color, background (Normalize #162)
 mark {
-  background: #ff0;
   color: #000;
+  background: #ff0;
 }
 
-// nrmlz.199, set font-size
+// Set font-size (Normalize #199)
 small {
   font-size: 80%;
 }
@@ -209,13 +206,13 @@ small {
 
 abbr {
 
-  // nrmlz.127, set border-bottom
+  // Set border-bottom (Normalize #127)
   &[title] {
     border-bottom: 1px dotted;
   }
 }
 
-// nrmlz.144, set font-style
+// Set font-style (Normalize #144)
 dfn {
   font-style: italic;
 }
@@ -223,132 +220,137 @@ dfn {
 del {}
 ins {}
 
-// nrmlz.207, set reasonable sub and sup styles
+// Set reasonable sub and sup styles (Normalize #207)
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
 sub {
   bottom: -0.25em;
 }
+
 sup {
   top: -0.5em;
 }
 
-// nrmlz.171, set font family, size
+///// Code?
+
+// Set font-size, font-family (Normalize #171)
 code,
 kbd,
 samp {
-  font-family: $font-monospace-stack;
   font-size: 1em; //// Needed?
+  font-family: $font-monospace-stack;
 }
 
-// nrmlz.171, set font family, size
-// nrmlz.183, set white-space: pre-wrap
+// Set font-size, font-family (Normalize #171)
+// Set white-space: pre-wrap (Normalize #183)
 pre {
-  font-family: $font-monospace-stack;
   font-size: 1em; //// Needed?
+  font-family: $font-monospace-stack;
   white-space: pre-wrap;
 }
 
-///////////////////////////////////////////////////////////
-// Forms
+///// Forms
 
-// nrmlz.267, set border, margin, padding
+// Set margin, padding, border (Normalize #267)
 fieldset {
-  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0;
 }
 
-// nrmlz.273, set border, padding
+// Set padding, border (Normalize #273)
 legend {
-  border: 0;
   padding: 0;
+  border: 0;
 }
 
-// Interactive form elements
-// nrmlz.283, font-family, font-size, margin
-// nrmlz.308, set text-transform: none
+///// Interactive form elements
+// Set margin, font-family, font-size (Normalize #283)
+// Set text-transform: none (Normalize #308)
 button,
 input,
 select,
 textarea {
   margin: 0;
-  font-family: inherit;
   font-size: 100%;
+  font-family: inherit;
   text-transform: none;
 }
 
-// nrmlz.298, set line-height
+// Set line-height (Normalize #298)
 button,
 input {
   line-height: normal;
 
-  // nrmlz.336, set cursor: default
+  // Set cursor: default (Normalize #336)
   html &[disabled] {
     cursor: default;
   }
 
-  // nrmlz.379, set border: 0, padding: 0
+  // Set padding: 0, border: 0 (Normalize #379)
   &::-moz-focus-inner {
-    border: 0;
     padding: 0;
+    border: 0;
   }
 }
 
-// Button-like inputs
-// nrmlz.320, set cursor: pointer, -webkit-appearance: button
+///// Button-like inputs
+
+// Set cursor: pointer, -webkit-appearance: button (Normalize #320)
 button,
 html input[type="button"], // Android fix
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
   cursor: pointer;
+
+  -webkit-appearance: button;
 }
 
-// nrmlz.345, set padding
+// Set padding (Normalize #345)
 input[type="checkbox"],
 input[type="radio"] {
   padding: 0;
 }
 
-// HTML5 Browser styled search boxes
-// nrmlz.356, set -webkit-appearance: textfield
+///// HTML5 Browser styled search boxes
+
+// Set -webkit-appearance: textfield (Normalize #356)
 input[type="search"] {
+
   -webkit-appearance: textfield;
 
-  // nrmlz.369, set -webkit-appearance: none
+  // Set -webkit-appearance: none (Normalize #369)
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration {
+
     -webkit-appearance: none;
   }
 }
 
-// nrmlz.389, set overflow:auto, vertical-align: top
-// H5BP.77, set resize
+// Set overflow:auto, vertical-align: top (Normalize #389)
+// Set resize (H5BP #77)
 textarea {
   overflow: auto;
   vertical-align: top;
   resize: vertical;
 }
 
-///////////////////////////////////////////////////////////
-// Tables
+///// Tables
 
-// nrmlz.403, set border-collapse, border-spacing
+// Set  border-spacing, border-collapse (Normalize #403)
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
 
 th {}
 td {}
-
 
 //// Extra normalizing issues:
 //// https://github.com/necolas/normalize.css/issues/143
