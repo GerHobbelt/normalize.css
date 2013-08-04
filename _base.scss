@@ -2,7 +2,24 @@
 // normalize.css v2.1.2
 // HTML5 Boilerplate v4.2.0
 
-// HTML5 Elements
+// Base
+
+// nrmlz.65, set text-size-adjust
+// nrmlz.65, set font-family
+html {
+  color: $text-color;
+  font-family: $font-family-main;
+  font-size: $base-font-size;
+  line-height: 1.4;
+  text-size-adjust: 100%;
+}
+
+// nrmlz.76, set margin
+body {
+  margin: 0;
+}
+
+// nrmlz.11, set display: block
 article,
 aside,
 details,
@@ -15,262 +32,323 @@ main,
 nav,
 section,
 summary {
-    display: block; // nrmlz.11, dflt
+display: block;
 }
 
-// nrmlz.50, default, bugfix
-//// Break out into extends of display none?
+// nrmlz.50, set display: none
 [hidden],
 template {
-    display: none;
+  display: none;
 }
 
-// nrmlz.40, bugfix, default
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
-
-// h5bp.26, fix
+// H5BP.26, set background, text-shadow: none
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
-
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
-// Base
-
-html {
-    //// This isn't needed. Set with HTML5BP code
-    //// font-family: sans-serif; /* 1 */  // nrmlz.65, set
-    text-size-adjust: 100%; // nrmlz.65, default
+// Universal focus styles
+// Set outline
+:focus {
+  outline:none;
 }
 
-//// H5BP color. can separate into sections with color vars
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
-}
-
-html {
-  //// font size for rem base
-}
-
-body {
-    margin: 0; // nrmlz.76, set
-}
-
-body {
-    font-size: 1em;
-    //// font family stack set
-    line-height: 1.4;
-}
-
+///////////////////////////////////////////////////////////
 // Links
+
+// nrmlz.88, set background
 a {
-    background: transparent; // nrmlz.88, default
-}
-//// Kill outline across the board and add as set? Check formalize
-a:focus {
-    outline: thin dotted; // nrmlz.96, set
-}
-a:active,
-a:hover {
-    outline: 0; // nrmlz.104, set
+  background: transparent;
+
+  // nrmlz.96, set outline
+  &:focus {
+    outline: thin dotted;
+  }
+
+  // nrmlz.104, set outline: 0
+  &:active,
+  &:hover {
+    outline: 0;
+  }
 }
 
+///////////////////////////////////////////////////////////
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+  a {}
+}
+
+// nrmlz.117, set margin, font-size
 h1 {
-    font-size: 2em; // nrmlz.117, set
-    margin: 0.67em 0; // set that sheet
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+p {}
+
+//// For robust use should specify a blockquote module with class based internals
+blockquote {}
+
+// nrmlz.191, set quotes
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-//// Add h1-6, h1-6 w/ a
-
-// nrmlz.152, set, H5BP set
+// nrmlz.152, set height
+// H5BP.42, set styles
 hr {
-    height: 0px;
-    margin: 0; // set
-    padding: 0; //set
+  height: 0px;
 }
 
+///////////////////////////////////////////////////////////
+// lists
 
-// inline elements
-//// in final, group by logic, not block/inline?
+//// Zero out and then add back in in content area, or with "with bullets" mixin?
+ol,
+ul {}
 
-abbr[title] { // nrmlz.127, set
-    border-bottom: 1px dotted;
+li {
+
+  // Remove vertical margins from nested lists
+  ol,
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
-b, // nrmlz.139, set
-strong {
-    font-weight: bold;
-}
+dl {}
+dt {}
+dd {}
 
-dfn { // nrmlz.144, set
-    font-style: italic;
-}
-
-mark { // nrmlz.162, set
-    background: #ff0;
-    color: #000;
-}
-
-pre { // nrmlz.183, default
-    white-space: pre-wrap;
-}
-
-// nrmlz.171, set
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, serif;
-    font-size: 1em;
-}
-
-blockquote {} //// Right? logically grouped, not inline
-
-q { // nrmlz.191, set
-    quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-small {
-    font-size: 80%; // nrmlz.199, set
-}
-
-sub, // nrmlz.207, default
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sup {
-    top: -0.5em;
-}
-sub {
-    bottom: -0.25em;
-}
-
-// Embedded content
-
-img,
-audio,
-canvas,
-video {
-    display: inline-block; // nrmlz.30, default
-    vertical-align: middle; // H5bp fix
-}
-
-img {
-    border: 0; // nrmlz.231, default
-}
-
-svg:not(:root) {
-    overflow: hidden; // nrmlz.239, default
-}
+///////////////////////////////////////////////////////////
 
 // Figures
 
+// nrmlz.251, set margin
 figure {
-    margin: 0; // nrmlz.251, set
+  margin: 0;
+
+  & > img{
+    display:block;
+  }
 }
 
+figcaption {}
+
+///////////////////////////////////////////////////////////
+// Embedded content
+
+// nrmlz.30, set display
+// H5BP.55, set vertical-align: middle
+img,
+canvas,
+audio,
+video {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// Fluid element styles
+img,
+video,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+}
+
+// nrmlz.231, set border, interpolation-mode: bicubic
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic
+}
+
+// nrmlz.239, set overflow: hidden
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// nrmlz.40, set display: none, height: 0
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+///////////////////////////////////////////////////////////
+
+em {}
+
+// nrmlz.139, set font-weight
+strong {
+  font-weight: bold;
+}
+
+// nrmlz.162, set background, color
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+// nrmlz.199, set font-size
+small {
+  font-size: 80%;
+}
+
+///////////////////////////////////////////////////////////
+
+abbr {
+
+  // nrmlz.127, set border-bottom
+  &[title] {
+    border-bottom: 1px dotted;
+  }
+}
+
+// nrmlz.144, set font-style
+dfn {
+  font-style: italic;
+}
+
+del {}
+ins {}
+
+// nrmlz.207, set reasonable sub and sup styles
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+// nrmlz.171, set font family, size
+code,
+kbd,
+samp {
+  font-family: $font-monospace-stack;
+  font-size: 1em; //// Needed?
+}
+
+// nrmlz.171, set font family, size
+// nrmlz.183, set white-space: pre-wrap
+pre {
+  font-family: $font-monospace-stack;
+  font-size: 1em; //// Needed?
+  white-space: pre-wrap;
+}
+
+///////////////////////////////////////////////////////////
 // Forms
 
-//// Break all of these into individual elements, use vars and extends
+// nrmlz.267, set border, margin, padding
 fieldset {
-    border: 1px solid #c0c0c0; // nrmlz.267, set, H5bp.67 zeroes these out
-    margin: 0 2px;             // nrmlz.267, set,
-    padding: 0.35em 0.625em 0.75em; // nrmlz.267, set
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
 
+// nrmlz.273, set border, padding
 legend {
-    border: 0; // nrmlz.273, set/dflt
-    padding: 0; // nrmlz.273, set/dflt
+  border: 0;
+  padding: 0;
 }
 
+// Interactive form elements
+// nrmlz.283, font-family, font-size, margin
+// nrmlz.308, set text-transform: none
 button,
 input,
 select,
 textarea {
-    font-family: inherit; // nrmlz.283, default
-    font-size: 100%; // nrmlz.283, default
-    margin: 0; // nrmlz.283, set
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+  text-transform: none;
 }
 
+// nrmlz.298, set line-height
 button,
 input {
-    line-height: normal; // nrmlz.298, default
+  line-height: normal;
+
+  // nrmlz.336, set cursor: default
+  html &[disabled] {
+    cursor: default;
+  }
+
+  // nrmlz.379, set border: 0, padding: 0
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
 }
 
-button,
-select {
-    text-transform: none; // nrmlz.308, default
-}
-
+// Button-like inputs
+// nrmlz.320, set cursor: pointer, -webkit-appearance: button
 button,
 html input[type="button"], // Android fix
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button; // nrmlz.320, default
-    cursor: pointer; // nrmlz.320, default
+  -webkit-appearance: button;
+  cursor: pointer;
 }
 
-button[disabled],
-html input[disabled] {
-    cursor: default; // nrmlz.336, default
-}
-
+// nrmlz.345, set padding
 input[type="checkbox"],
 input[type="radio"] {
-    padding: 0; // nrmlz.345, default
+  padding: 0;
 }
 
+// HTML5 Browser styled search boxes
+// nrmlz.356, set -webkit-appearance: textfield
 input[type="search"] {
-    -webkit-appearance: textfield; // nrmlz.356, default
-}
+  -webkit-appearance: textfield;
 
-//// Sassify
-input[type="search"]::-webkit-search-cancel-button, // nrmlz.369, default, depends?
-input[type="search"]::-webkit-search-decoration {
+  // nrmlz.369, set -webkit-appearance: none
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
     -webkit-appearance: none;
+  }
 }
 
-
-//// HMMMMMMM, figure this out
-button::-moz-focus-inner, // nrmlz.379, default. check if moz only
-input::-moz-focus-inner {
-//// should this be with focus rules? should this reset all moz focus behavior?
-//// http://stackoverflow.com/questions/71074/how-to-remove-firefoxs-dotted-outline-on-buttons-as-well-as-links
-//// http://www.karlrixon.co.uk/writing/remove-button-focus-outline-using-css/
-    border: 0;
-    padding: 0;
-}
-
+// nrmlz.389, set overflow:auto, vertical-align: top
+// H5BP.77, set resize
 textarea {
-    overflow: auto; // nrmlz.389, default
-    vertical-align: top; // nrmlz.389, default
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
 }
 
-textarea {
-    resize: vertical; // h5bp.77
-}
-
+///////////////////////////////////////////////////////////
 // Tables
 
+// nrmlz.403, set border-collapse, border-spacing
 table {
-    border-collapse: collapse; // nrmlz.403, default
-    border-spacing: 0; // nrmlz.403, default
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
+th {}
+td {}
+
 
 //// Extra normalizing issues:
 //// https://github.com/necolas/normalize.css/issues/143
