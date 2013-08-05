@@ -1,6 +1,11 @@
 // ---------------------------------------------------------
 // Set.scss
 // A Sass base and normalization stylesheet
+//
+// Tracks
+// normalize.css v2.1.2 (https://github.com/necolas/normalize.css)
+// HTML5 Boilerplate v4.2.0 (https://github.com/h5bp/html5-boilerplate)
+//
 // https://github.com/robwierzbowski/set.scss
 // ---------------------------------------------------------
 
@@ -39,10 +44,10 @@ template {
 
 // Set font-family, text-size-adjust (Normalize #65)
 html {
-  color: $text-color;
+  color: $type-color;
   font-size: $base-font-size;
   line-height: 1.4;
-  font-family: $font-family-main;
+  font-family: $type-main-stack;
   text-size-adjust: 100%;
 }
 
@@ -187,14 +192,14 @@ code,
 kbd,
 samp {
   font-size: 1em;
-  font-family: $font-monospace-stack;
+  font-family: $type-monospace-stack;
 }
 
 // Set font-size, font-family (Normalize #171)
 // Set white-space: pre-wrap (Normalize #183)
 pre {
   font-size: 1em;
-  font-family: $font-monospace-stack;
+  font-family: $type-monospace-stack;
   white-space: pre-wrap;
 }
 
