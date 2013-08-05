@@ -10,7 +10,7 @@
 
 
 // HTML5 set
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 // Set display: block (Normalize #11)
 article,
@@ -35,7 +35,7 @@ template {
 }
 
 // Base
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 // Set font-family, text-size-adjust (Normalize #65)
 html {
@@ -52,12 +52,12 @@ body {
 }
 
 // Focus
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 :focus {}
 
 // Selection
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 // Set background, text-shadow: none (H5BP #26)
 ::-moz-selection {
@@ -70,7 +70,7 @@ body {
 }
 
 // Links
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 // Set background (Normalize #88)
 a {
@@ -92,7 +92,7 @@ a {
 }
 
 // Headings and Paragraph
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 h1,
 h2,
@@ -123,7 +123,7 @@ hr {
 }
 
 // Quotes
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 blockquote {}
 
@@ -133,13 +133,13 @@ q {
 }
 
 // Figures
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 // Set margin (Normalize #251)
 figure {
   margin: 0;
 
-  //// Needed with verical align property on img?
+  //// Needed with vertical align property on img?
   & > img {
     display:block;
   }
@@ -148,7 +148,7 @@ figure {
 figcaption {}
 
 // Lists
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 // Clear list styles so we can use lists for semantic markup.
 // Set bulleted list styles within appropriate content blocks.
@@ -170,7 +170,7 @@ dt {}
 dd {}
 
 // Emphasis
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 em {}
 
@@ -180,7 +180,7 @@ strong {
 }
 
 // Code
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 // Set font-size, font-family (Normalize #171)
 code,
@@ -193,13 +193,13 @@ samp {
 // Set font-size, font-family (Normalize #171)
 // Set white-space: pre-wrap (Normalize #183)
 pre {
-  font-size: 1em; //// Needed?
+  font-size: 1em;
   font-family: $font-monospace-stack;
   white-space: pre-wrap;
 }
 
-// Further text semantics
-// -----------------------------------------------------------------------------
+// Additional semantic text
+// ---------------------------------------------------------
 
 abbr {
 
@@ -209,15 +209,13 @@ abbr {
   }
 }
 
-address {
-  font-style: italic;
-}
-
 // Set font-style (Normalize #144)
 dfn {
   font-style: italic;
 }
 
+address {}
+cite {}
 del {}
 ins {}
 
@@ -232,7 +230,7 @@ small {
   font-size: 80%;
 }
 
-// Set reasonable sub and sup styles (Normalize #207)
+// Set sub and sup styles (Normalize #207)
 sub,
 sup {
   position: relative;
@@ -250,7 +248,7 @@ sup {
 }
 
 // Images and Embedded content
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 // Set display (Normalize #30)
 // Set vertical-align: middle (H5BP #55)
@@ -262,6 +260,7 @@ video {
   vertical-align: middle;
 }
 
+// Responsive content
 img,
 embed,
 object,
@@ -282,6 +281,8 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+iframe {}
+
 // Set display: none, height: 0 (Normalize #40)
 audio:not([controls]) {
   display: none;
@@ -289,7 +290,7 @@ audio:not([controls]) {
 }
 
 // Tables
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 // Set  border-spacing, border-collapse (Normalize #403)
 table {
@@ -301,7 +302,7 @@ th {}
 td {}
 
 // Forms
-// -----------------------------------------------------------------------------
+// ---------------------------------------------------------
 
 // Set margin, padding, border (Normalize #267)
 fieldset {
@@ -347,7 +348,7 @@ input {
 
 // Set cursor: pointer, -webkit-appearance: button (Normalize #320)
 button,
-html input[type="button"], // Android fix
+html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
@@ -374,7 +375,7 @@ input[type="search"] {
   }
 }
 
-// Set overflow:auto, vertical-align: top (Normalize #389)
+// Set overflow: auto, vertical-align: top (Normalize #389)
 // Set resize (H5BP #77)
 textarea {
   overflow: auto;
