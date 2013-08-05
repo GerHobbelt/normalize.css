@@ -1,8 +1,41 @@
 
-// normalize.css v2.1.2
-// HTML5 Boilerplate v4.2.0
 
-///// Base
+
+
+
+
+// normalize.css v2.1.2 (https://github.com/necolas/normalize.css)
+// HTML5 Boilerplate v4.2.0 (https://github.com/h5bp/html5-boilerplate)
+
+
+
+// HTML5 set
+// -----------------------------------------------------------------------------
+
+// Set display: block (Normalize #11)
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+// Set display: none (Normalize #50)
+[hidden],
+template {
+  display: none;
+}
+
+// Base
+// -----------------------------------------------------------------------------
 
 // Set font-family, text-size-adjust (Normalize #65)
 html {
@@ -18,27 +51,13 @@ body {
   margin: 0;
 }
 
-// Set display: block (Normalize #11)
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-display: block;
-}
+// Focus
+// -----------------------------------------------------------------------------
 
-// Set display: none (Normalize #50)
-[hidden],
-template {
-  display: none;
-}
+:focus {}
+
+// Selection
+// -----------------------------------------------------------------------------
 
 // Set background, text-shadow: none (H5BP #26)
 ::-moz-selection {
@@ -50,34 +69,37 @@ template {
   background: #b3d4fc;
 }
 
-///// Universal focus styles
-
-// Set outline
-:focus {
-  outline:none;
-}
-
-///// Links
+// Links
+// -----------------------------------------------------------------------------
 
 // Set background (Normalize #88)
 a {
   background: transparent;
 
+  &:link {}
+  &:visited {}
   // Set outline (Normalize #96)
   &:focus {
     outline: thin dotted;
   }
-
   // Set outline: 0 (Normalize #104)
-  &:active,
   &:hover {
+    outline: 0;
+  }
+  &:active {
     outline: 0;
   }
 }
 
-///// Headers
+// Headings and Paragraph
+// -----------------------------------------------------------------------------
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   a {}
 }
 
@@ -94,7 +116,15 @@ h6 {}
 
 p {}
 
-//// For robust use should specify a blockquote module with class based internals
+// Set height (Normalize #152)
+// Set styles (H5BP #42)
+hr {
+  height: 0px;
+}
+
+// Quotes
+// -----------------------------------------------------------------------------
+
 blockquote {}
 
 // Set quotes (Normalize #191)
@@ -102,33 +132,8 @@ q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-// Set height (Normalize #152)
-// Set styles (H5BP #42)
-hr {
-  height: 0px;
-}
-
-///// Lists
-
-//// Zero out and then add back in in content area, or with "with bullets" mixin?
-ol,
-ul {}
-
-li {
-
-  // Set vertical margins
-  ol,
-  ul {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-
-dl {}
-dt {}
-dd {}
-
-///// Figures
+// Figures
+// -----------------------------------------------------------------------------
 
 // Set margin (Normalize #251)
 figure {
@@ -142,7 +147,110 @@ figure {
 
 figcaption {}
 
-// Embedded content
+// Lists
+// -----------------------------------------------------------------------------
+
+// Clear list styles so we can use lists for semantic markup.
+// Set bulleted list styles within appropriate content blocks.
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  display: block;
+
+  ol,
+  ul {}
+}
+
+dl {}
+dt {}
+dd {}
+
+// Emphasis
+// -----------------------------------------------------------------------------
+
+em {}
+
+// Set font-weight (Normalize #139)
+strong {
+  font-weight: bold;
+}
+
+// Code
+// -----------------------------------------------------------------------------
+
+// Set font-size, font-family (Normalize #171)
+code,
+kbd,
+samp {
+  font-size: 1em;
+  font-family: $font-monospace-stack;
+}
+
+// Set font-size, font-family (Normalize #171)
+// Set white-space: pre-wrap (Normalize #183)
+pre {
+  font-size: 1em; //// Needed?
+  font-family: $font-monospace-stack;
+  white-space: pre-wrap;
+}
+
+// Further text semantics
+// -----------------------------------------------------------------------------
+
+abbr {
+
+  // Set border-bottom (Normalize #127)
+  &[title] {
+    border-bottom: 1px dotted;
+  }
+}
+
+address {
+  font-style: italic;
+}
+
+// Set font-style (Normalize #144)
+dfn {
+  font-style: italic;
+}
+
+del {}
+ins {}
+
+// Set color, background (Normalize #162)
+mark {
+  color: #000;
+  background: #ff0;
+}
+
+// Set font-size (Normalize #199)
+small {
+  font-size: 80%;
+}
+
+// Set reasonable sub and sup styles (Normalize #207)
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+// Images and Embedded content
+// -----------------------------------------------------------------------------
 
 // Set display (Normalize #30)
 // Set vertical-align: middle (H5BP #55)
@@ -153,8 +261,6 @@ video {
   display: inline-block;
   vertical-align: middle;
 }
-
-///// Fluid embedded content
 
 img,
 embed,
@@ -182,80 +288,20 @@ audio:not([controls]) {
   height: 0;
 }
 
-///// Emphasis
+// Tables
+// -----------------------------------------------------------------------------
 
-em {}
-
-// Set font-weight (Normalize #139)
-strong {
-  font-weight: bold;
+// Set  border-spacing, border-collapse (Normalize #403)
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
-// Set color, background (Normalize #162)
-mark {
-  color: #000;
-  background: #ff0;
-}
+th {}
+td {}
 
-// Set font-size (Normalize #199)
-small {
-  font-size: 80%;
-}
-
-///////////////////////////////////////////////////////////
-
-abbr {
-
-  // Set border-bottom (Normalize #127)
-  &[title] {
-    border-bottom: 1px dotted;
-  }
-}
-
-// Set font-style (Normalize #144)
-dfn {
-  font-style: italic;
-}
-
-del {}
-ins {}
-
-// Set reasonable sub and sup styles (Normalize #207)
-sub,
-sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-///// Code?
-
-// Set font-size, font-family (Normalize #171)
-code,
-kbd,
-samp {
-  font-size: 1em; //// Needed?
-  font-family: $font-monospace-stack;
-}
-
-// Set font-size, font-family (Normalize #171)
-// Set white-space: pre-wrap (Normalize #183)
-pre {
-  font-size: 1em; //// Needed?
-  font-family: $font-monospace-stack;
-  white-space: pre-wrap;
-}
-
-///// Forms
+// Forms
+// -----------------------------------------------------------------------------
 
 // Set margin, padding, border (Normalize #267)
 fieldset {
@@ -270,7 +316,6 @@ legend {
   border: 0;
 }
 
-///// Interactive form elements
 // Set margin, font-family, font-size (Normalize #283)
 // Set text-transform: none (Normalize #308)
 button,
@@ -300,8 +345,6 @@ input {
   }
 }
 
-///// Button-like inputs
-
 // Set cursor: pointer, -webkit-appearance: button (Normalize #320)
 button,
 html input[type="button"], // Android fix
@@ -317,8 +360,6 @@ input[type="checkbox"],
 input[type="radio"] {
   padding: 0;
 }
-
-///// HTML5 Browser styled search boxes
 
 // Set -webkit-appearance: textfield (Normalize #356)
 input[type="search"] {
@@ -340,21 +381,3 @@ textarea {
   vertical-align: top;
   resize: vertical;
 }
-
-///// Tables
-
-// Set  border-spacing, border-collapse (Normalize #403)
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-th {}
-td {}
-
-//// Extra normalizing issues:
-//// https://github.com/necolas/normalize.css/issues/143
-//// https://github.com/necolas/normalize.css/issues/126 -- possibly border box on all will fix. Maybe browsershot this one.
-//// Placeholder/ forms: https://github.com/necolas/normalize.css/issues/157
-//// More forms, optgroup: https://github.com/necolas/normalize.css/issues/102
-//// Outline offset. In general, would like to be able to "set" cross browser outline. https://github.com/necolas/normalize.css/issues/19, https://github.com/necolas/normalize.css/issues/154
