@@ -9,6 +9,18 @@
 // https://github.com/robwierzbowski/set.scss
 // ---------------------------------------------------------
 
+// Variables
+// ---------------------------------------------------------
+
+// Replace these with your project's variables
+$type-color: default !default;
+$base-font-size: 100% !default;
+$type-main-stack: sans-serif !default;
+$type-monospace-stack: monospace !default;
+
+// Universal
+// ---------------------------------------------------------
+
 // Border-box is required.
 * {
   box-sizing: border-box;
