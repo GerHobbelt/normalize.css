@@ -1,12 +1,12 @@
 // ---------------------------------------------------------
 // Set.scss
-// A Sass base and normalization stylesheet
+// A Sass normalize + base stylesheet
 //
-// Tracks
+// This project tracks:
 // normalize.css v2.1.2 (https://github.com/necolas/normalize.css)
 // HTML5 Boilerplate v4.2.0 (https://github.com/h5bp/html5-boilerplate)
 //
-// https://github.com/robwierzbowski/set.scss
+// Homepage: https://github.com/robwierzbowski/set.scss
 // ---------------------------------------------------------
 
 // Variables
@@ -156,7 +156,6 @@ q {
 figure {
   margin: 0;
 
-  //// Needed with vertical align property on img?
   & > img {
     display:block;
   }
@@ -168,7 +167,7 @@ figcaption {}
 // ---------------------------------------------------------
 
 // Clear list styles so we can use lists for semantic markup.
-// Set bulleted list styles within appropriate content blocks.
+// Set bulleted list styles in appropriate content modules.
 ol,
 ul {
   margin: 0;
