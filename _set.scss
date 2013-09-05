@@ -4,7 +4,7 @@
 //
 // This project tracks:
 // normalize.css v2.1.2 (https://github.com/necolas/normalize.css)
-// HTML5 Boilerplate v4.2.0 (https://github.com/h5bp/html5-boilerplate)
+// HTML5 Boilerplate v4.2.0 (https://github.com/h5bp)
 //
 // Homepage: https://github.com/robwierzbowski/set.scss
 // ---------------------------------------------------------
@@ -29,7 +29,7 @@ $type-stack-monospace: monospace !default;
 // HTML5 set
 // ---------------------------------------------------------
 
-// Set display: block (Normalize #11)
+// Set display: block (Normalize)
 article,
 aside,
 details,
@@ -45,7 +45,7 @@ summary {
   display: block;
 }
 
-// Set display: none (Normalize #50)
+// Set display: none (Normalize)
 [hidden],
 template {
   display: none;
@@ -54,7 +54,7 @@ template {
 // Base
 // ---------------------------------------------------------
 
-// Set font-family, text-size-adjust (Normalize #65)
+// Set font-family, text-size-adjust (Normalize)
 html {
   color: $type-color;
   font-size: $base-font-size;
@@ -63,7 +63,7 @@ html {
   text-size-adjust: 100%;
 }
 
-// Set margin (Normalize #76)
+// Set margin (Normalize)
 body {
   margin: 0;
 }
@@ -76,7 +76,7 @@ body {
 // Selection
 // ---------------------------------------------------------
 
-// Set text-shadow: none (H5BP #26)
+// Set text-shadow: none (H5BP)
 ::-moz-selection {
   text-shadow: none;
 }
@@ -87,17 +87,17 @@ body {
 // Links
 // ---------------------------------------------------------
 
-// Set background (Normalize #88)
+// Set background (Normalize)
 a {
   background: transparent;
 
   &:link {}
   &:visited {}
-  // Set outline (Normalize #96)
+  // Set outline (Normalize)
   &:focus {
     outline: thin dotted;
   }
-  // Set outline: 0 (Normalize #104)
+  // Set outline: 0 (Normalize)
   &:hover {
     outline: 0;
   }
@@ -118,7 +118,7 @@ h6 {
   a {}
 }
 
-// Set margin, font-size (Normalize #117)
+// Set margin, font-size (Normalize)
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
@@ -131,8 +131,8 @@ h6 {}
 
 p {}
 
-// Set height (Normalize #152)
-// Set styles (H5BP #42)
+// Set height (Normalize)
+// Set styles (H5BP)
 hr {
   height: 0px;
 }
@@ -142,7 +142,7 @@ hr {
 
 blockquote {}
 
-// Set quotes (Normalize #191)
+// Set quotes (Normalize)
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -150,7 +150,7 @@ q {
 // Figures
 // ---------------------------------------------------------
 
-// Set margin (Normalize #251)
+// Set margin (Normalize)
 figure {
   margin: 0;
 
@@ -188,7 +188,7 @@ dd {}
 
 em {}
 
-// Set font-weight (Normalize #139)
+// Set font-weight (Normalize)
 strong {
   font-weight: bold;
 }
@@ -196,7 +196,7 @@ strong {
 // Code
 // ---------------------------------------------------------
 
-// Set font-size, font-family (Normalize #171)
+// Set font-size, font-family (Normalize)
 code,
 kbd,
 samp {
@@ -204,8 +204,8 @@ samp {
   font-family: $type-stack-monospace;
 }
 
-// Set font-size, font-family (Normalize #171)
-// Set white-space: pre-wrap (Normalize #183)
+// Set font-size, font-family (Normalize)
+// Set white-space: pre-wrap (Normalize)
 pre {
   font-size: 1em;
   font-family: $type-stack-monospace;
@@ -217,13 +217,13 @@ pre {
 
 abbr {
 
-  // Set border-bottom (Normalize #127)
+  // Set border-bottom (Normalize)
   &[title] {
     border-bottom: 1px dotted;
   }
 }
 
-// Set font-style (Normalize #144)
+// Set font-style (Normalize)
 dfn {
   font-style: italic;
 }
@@ -233,18 +233,18 @@ cite {}
 del {}
 ins {}
 
-// Set color, background (Normalize #162)
+// Set color, background (Normalize)
 mark {
   color: #000;
   background: #ff0;
 }
 
-// Set font-size (Normalize #199)
+// Set font-size (Normalize)
 small {
   font-size: 80%;
 }
 
-// Set sub and sup styles (Normalize #207)
+// Set sub and sup styles (Normalize)
 sub,
 sup {
   position: relative;
@@ -264,8 +264,8 @@ sup {
 // Images and Embedded content
 // ---------------------------------------------------------
 
-// Set display (Normalize #30)
-// Set vertical-align: middle (H5BP #55)
+// Set display (Normalize)
+// Set vertical-align: middle (H5BP)
 img,
 canvas,
 audio,
@@ -283,21 +283,21 @@ video {
   height: auto;
 }
 
-// Set border, interpolation-mode: bicubic (Normalize #231)
+// Set border, interpolation-mode: bicubic (Normalize)
 img {
   border: 0;
 
   -ms-interpolation-mode: bicubic;
 }
 
-// Set overflow: hidden (Normalize #239)
+// Set overflow: hidden (Normalize)
 svg:not(:root) {
   overflow: hidden;
 }
 
 iframe {}
 
-// Set display: none, height: 0 (Normalize #40)
+// Set display: none, height: 0 (Normalize)
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -306,7 +306,7 @@ audio:not([controls]) {
 // Tables
 // ---------------------------------------------------------
 
-// Set  border-spacing, border-collapse (Normalize #403)
+// Set  border-spacing, border-collapse (Normalize)
 table {
   border-spacing: 0;
   border-collapse: collapse;
@@ -318,21 +318,21 @@ td {}
 // Forms
 // ---------------------------------------------------------
 
-// Set margin, padding, border (Normalize #267)
+// Set margin, padding, border (Normalize)
 fieldset {
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
   border: 1px solid #c0c0c0;
 }
 
-// Set padding, border (Normalize #273)
+// Set padding, border (Normalize)
 legend {
   padding: 0;
   border: 0;
 }
 
-// Set margin, font-family, font-size (Normalize #283)
-// Set text-transform: none (Normalize #308)
+// Set margin, font-family, font-size (Normalize)
+// Set text-transform: none (Normalize)
 button,
 input,
 select,
@@ -343,24 +343,24 @@ textarea {
   text-transform: none;
 }
 
-// Set line-height (Normalize #298)
+// Set line-height (Normalize)
 button,
 input {
   line-height: normal;
 
-  // Set cursor: default (Normalize #336)
+  // Set cursor: default (Normalize)
   html &[disabled] {
     cursor: default;
   }
 
-  // Set padding: 0, border: 0 (Normalize #379)
+  // Set padding: 0, border: 0 (Normalize)
   &::-moz-focus-inner {
     padding: 0;
     border: 0;
   }
 }
 
-// Set cursor: pointer, -webkit-appearance: button (Normalize #320)
+// Set cursor: pointer, -webkit-appearance: button (Normalize)
 button,
 html input[type="button"],
 input[type="reset"],
@@ -370,18 +370,18 @@ input[type="submit"] {
   -webkit-appearance: button;
 }
 
-// Set padding (Normalize #345)
+// Set padding (Normalize)
 input[type="checkbox"],
 input[type="radio"] {
   padding: 0;
 }
 
-// Set -webkit-appearance: textfield (Normalize #356)
+// Set -webkit-appearance: textfield (Normalize)
 input[type="search"] {
 
   -webkit-appearance: textfield;
 
-  // Set -webkit-appearance: none (Normalize #369)
+  // Set -webkit-appearance: none (Normalize)
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration {
 
@@ -389,8 +389,8 @@ input[type="search"] {
   }
 }
 
-// Set overflow: auto, vertical-align: top (Normalize #389)
-// Set resize (H5BP #77)
+// Set overflow: auto, vertical-align: top (Normalize)
+// Set resize (H5BP)
 textarea {
   overflow: auto;
   vertical-align: top;
