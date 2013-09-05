@@ -15,8 +15,8 @@
 // Replace these with your project's variables
 $type-color: default !default;
 $base-font-size: 100% !default;
-$type-main-stack: sans-serif !default;
-$type-monospace-stack: monospace !default;
+$type-stack-main: sans-serif !default;
+$type-stack-monospace: monospace !default;
 
 // Universal
 // ---------------------------------------------------------
@@ -59,7 +59,7 @@ html {
   color: $type-color;
   font-size: $base-font-size;
   line-height: 1.4;
-  font-family: $type-main-stack;
+  font-family: $type-stack-main;
   text-size-adjust: 100%;
 }
 
@@ -201,14 +201,14 @@ code,
 kbd,
 samp {
   font-size: 1em;
-  font-family: $type-monospace-stack;
+  font-family: $type-stack-monospace;
 }
 
 // Set font-size, font-family (Normalize #171)
 // Set white-space: pre-wrap (Normalize #183)
 pre {
   font-size: 1em;
-  font-family: $type-monospace-stack;
+  font-family: $type-stack-monospace;
   white-space: pre-wrap;
 }
 
