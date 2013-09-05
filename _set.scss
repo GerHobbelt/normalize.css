@@ -76,14 +76,12 @@ body {
 // Selection
 // ---------------------------------------------------------
 
-// Set background, text-shadow: none (H5BP #26)
+// Set text-shadow: none (H5BP #26)
 ::-moz-selection {
   text-shadow: none;
-  background: #b3d4fc;
 }
 ::selection {
   text-shadow: none;
-  background: #b3d4fc;
 }
 
 // Links
