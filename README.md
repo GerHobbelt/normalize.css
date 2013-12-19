@@ -1,21 +1,18 @@
-# normalize.css v2
+# normalize.scss v2
 
 Normalize.css is a customisable CSS file that makes browsers render all
 elements more consistently and in line with modern standards.
 
-The project relies on researching the differences between default browser
-styles in order to precisely target only the styles that need or benefit from
-normalizing.
+Normalize.scss takes this to the next level: Allowing basic customisation for
+most aspects to keep the already little normalize.css as little as really
+needed. Please head over to the
+[original project page](http://necolas.github.io/normalize.css/) for more
+details. Don't forget that this needs [SASS](http://sass-lang.com/)! For a pure
+CSS version head down to the above mentioned project page of normalize.css.
 
-[Check out the demo](http://necolas.github.io/normalize.css/latest/test.html)
+## Installation
 
-## Install
-
-Download from the [project page](http://necolas.github.io/normalize.css/).
-
-Install with [Bower](http://bower.io/): `bower install --save normalize-css`
-
-Install with [Component(1)](http://component.io/): `component install necolas/normalize.css`
+Download the file and include it in your main document: `@include 'normalize'`
 
 ## What does it do?
 
@@ -27,12 +24,14 @@ Install with [Component(1)](http://component.io/): `component install necolas/no
 
 ## How to use it
 
-No other styles should come before Normalize.css.
+Download it from this repo and include it in your main scss: `@include 'normalize'`
 
-It is recommended that you include the `normalize.css` file as untouched
-library code.
+It is recommended that you don't modify the file. You can change the properties
+by including the variables in your document. The default values will only be
+used if they're not already provided. Refer to the source code for details on
+the given variables.
 
-## Browser support
+## Browser support (customizable)
 
 * Google Chrome
 * Mozilla Firefox 4+
@@ -40,15 +39,9 @@ library code.
 * Opera 12+
 * Internet Explorer 8+
 
-[Normalize.css v1 provides legacy browser
-support](https://github.com/necolas/normalize.css/tree/v1) (IE 6+, Safari 4+),
-but is no longer actively developed.
-
-## Contributing
-
-Please read the CONTRIBUTING.md
-
 ## Acknowledgements
 
 Normalize.css is a project by [Nicolas Gallagher](https://github.com/necolas),
 co-created with [Jonathan Neal](https://github.com/jonathantneal).
+
+Normalize.scss is a SASS-Port by [Matthias Gianfelice](https://github.com/matthiasgi).
