@@ -3,6 +3,7 @@
 === 2.1.3-E (December 19, 2013)
 
 * Made `functions.scss` not compilable
+* Made `normalize.scss` and `print.scss` compilable
 
 === 2.1.3-D (December 19, 2013)
 
