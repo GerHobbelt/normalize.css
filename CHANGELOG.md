@@ -1,5 +1,9 @@
 === HEAD
 
+=== 2.1.3-C (December 19, 2013)
+
+* Added functions.scss, a collection of useful functions for SASS
+
 === 2.1.3-B (December 19, 2013)
 
 * Added print-styles from [H5BP](http://h5bp.com)
