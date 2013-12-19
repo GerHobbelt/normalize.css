@@ -15,6 +15,10 @@ $normalize-ie-support: 8 !default;
 // Set the default font-family
 $normalize-font-family: sans-serif !default;
 
+// Set default background and font color
+$normalize-background: #fff !default;
+$normalize-color:      #222 !default;
+
 // Should normalize care about styling the following elements?
 // See the implimentation below to decide your needs.
 $normalize-h1-care:       true !default;
@@ -38,6 +42,9 @@ $-normalize-mark-background: #ff0;
 $-normalize-mark-color:      #000;
 $normalize-mark-background:  $-normalize-mark-background !default;
 $normalize-mark-color:       $-normalize-mark-color !default;
+
+// Make anchor click area larger
+$normalize-link-larger: false !default;
 
 
 //
@@ -109,8 +116,19 @@ html {
 }
 
 // Remove default margin.
+//*Set custom background
 body {
+  background: $normalize-background;
   margin: 0;
+}
+
+//*Set global font-color
+button,
+html,
+input,
+select,
+textarea {
+  color: $normalize-color;
 }
 
 //*Normalize paragraph margin
@@ -126,6 +144,13 @@ a {
   // Remove the gray background color from active links in IE 10.
   @if $normalize-ie-support <= 10 {
     background: transparent;
+  }
+
+  //*Make click area for link larger
+  @if $normalize-link-larger {
+    margin: -.5em;
+    padding: .5em;
+    position: relative;
   }
 
   // Address `outline` inconsistency between Chrome and other browsers.
@@ -159,8 +184,9 @@ abbr[title] {
 }
 
 // Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
-//*Makes th bold
+//*Makes th and dt bold
 b,
+dt,
 strong,
 th {
   font-weight: bold;
@@ -481,4 +507,9 @@ table {
     @extend .clearfix::before;
     clear: both;
   }
+}
+
+//*Provides native scrolling on mainly mobile devices
+%normalize-scroll {
+  -webkit-overflow-scrolling: touch;
 }

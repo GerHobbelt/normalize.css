@@ -1,5 +1,12 @@
 === HEAD
 
+=== 2.1.3-D (December 19, 2013)
+
+* Set background and font color
+* Make link-click-area larger
+* Also dt made bold
+* Mixin for native scrolling on touch-devices
+
 === 2.1.3-C (December 19, 2013)
 
 * Added functions.scss, a collection of useful functions for SASS
