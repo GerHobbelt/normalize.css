@@ -8,8 +8,9 @@ strip:
 	echo "strip comments, keep the LESS file otherwise intact"
 	cpp -P normalize.less > normalize.swp
 
-lessify: 
+lessify: strip 
 	node_modules/.bin/lessc --verbose --source-map-less-inline normalize.swp normalize.css
+	-rm normalize.swp
 
 # alternative build command, next to `lessify`: `lessifyB` keeps the comments and everything in there: 
 lessifyB: 
