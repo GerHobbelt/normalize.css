@@ -18,8 +18,8 @@ normalize.css: normalize.swp package.json
 
 # copy the output files to a directory ready for merger into the gh-pages branch:
 web: lessify
-	-mkdir latest
-	cp normalize.css normalize.less test.html latest/
+	-mkdir latest-next
+	cp normalize.css normalize.less test.html latest-next/
 
 
 clean:

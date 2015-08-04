@@ -1,5 +1,8 @@
 # makefile temporaries
 *.tmp
+*.swp
+
+latest-next/
 
 # editor backup files
 *.bak
