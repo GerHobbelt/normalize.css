@@ -351,6 +351,14 @@ html input[disabled] {
 }
 
 /**
+ * 1. Opacity set to `1` in Mozilla Firefox 19+
+ */
+
+input::-moz-placeholder {
+  opacity: 1;
+}
+
+/**
  * Remove inner padding and border in Firefox 4+.
  */
 
