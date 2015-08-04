@@ -6,14 +6,21 @@
   "style": "normalize.css",
   "files": [
     "LICENSE.md",
-    "normalize.css"
+    "normalize.css",
+    "normalize.less"
   ],
   "homepage": "http://necolas.github.io/normalize.css",
   "repository": {
     "type": "git",
     "url": "git://github.com/necolas/normalize.css.git"
   },
-  "main": "normalize.css",
   "author": "Nicolas Gallagher",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "less": "^2.5.1",
+    "less-plugin-clean-css": "^1.5.1"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/lessc --verbose --source-map-less-inline  --clean-css=\"--s1 -b --skip-rebase --skip-advanced\" normalize.less normalize.css"
+  }
 }
