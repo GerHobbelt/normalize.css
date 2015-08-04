@@ -1,19 +1,19 @@
 
 all: strip lessify
 
-.PHONY: strip lessify web clean superclean 
+.PHONY: strip lessify lessifyB web clean superclean 
 
 
-strip: normalize.swp
-
-normalize.swp: normalize.less 
+strip: 
 	echo "strip comments, keep the LESS file otherwise intact"
 	cpp -P normalize.less > normalize.swp
 
-lessify: normalize.css
-
-normalize.css: normalize.swp package.json
+lessify: 
 	node_modules/.bin/lessc --verbose --source-map-less-inline normalize.swp normalize.css
+
+# alternative build command, next to `lessify`: `lessifyB` keeps the comments and everything in there: 
+lessifyB: 
+	node_modules/.bin/lessc --verbose --source-map-less-inline normalize.less normalize.css
 
 
 # copy the output files to a directory ready for merger into the gh-pages branch:
