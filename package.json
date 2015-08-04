@@ -21,6 +21,6 @@
     "less-plugin-clean-css": "^1.5.1"
   },
   "scripts": {
-    "build": "node_modules/.bin/lessc --verbose --source-map-less-inline  --clean-css=\"--s1 -b --skip-rebase --skip-advanced\" normalize.less normalize.css"
+    "build": "node_modules/.bin/lessc --verbose --source-map-less-inline --clean-css=\"--s1 -b --skip-rebase --skip-advanced\" normalize.tmp normalize.css"
   }
 }

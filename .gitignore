@@ -1,1 +1,9 @@
+# makefile temporaries
+*.tmp
+
+# editor backup files
+*.bak
+*~
+
+# npm
 node_modules
