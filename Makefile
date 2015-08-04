@@ -28,4 +28,5 @@ clean:
 
 superclean: clean
 	-rm normalize.swp
+	-rm -rf latest-next/
 
