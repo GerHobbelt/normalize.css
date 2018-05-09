@@ -1,4 +1,4 @@
-# normalize.css
+# normalize.scss
 
 <a href="https://github.com/necolas/normalize.css"><img
   src="https://necolas.github.io/normalize.css/logo.svg" alt="Normalize Logo"
