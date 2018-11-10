@@ -1,14 +1,14 @@
 {
-  "name": "normalize.css",
-  "version": "8.0.1",
+  "name": "normalize.scss",
+  "version": "8.0.1-scss",
   "description": "A modern alternative to CSS resets",
-  "main": "normalize.css",
-  "style": "normalize.css",
+  "main": "normalize.scss",
+  "style": "normalize.scss",
   "files": [
     "LICENSE.md",
-    "normalize.css"
+    "normalize.scss"
   ],
-  "repository": "necolas/normalize.css",
+  "repository": "ptrl/normalize.scss",
   "license": "MIT",
   "bugs": "https://github.com/necolas/normalize.css/issues",
   "homepage": "https://necolas.github.io/normalize.css"
